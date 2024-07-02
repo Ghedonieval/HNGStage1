@@ -9,11 +9,9 @@ import org.springframework.stereotype.Service;
 public class helloService {
 
     public helloResponse hello(String visitorName, HttpServletRequest request) {
-        String clientIP = request.getRemoteAddr();
-        // For demonstration purposes, assuming location based on IP
-        String location = "New York"; // You can use a service or API to get actual location
-
-        // Hardcoded temperature for demonstration
+//        String clientIP = request.getRemoteAddr();
+        String clientIP = "127.0.0.1";
+        String location = "New York";
         int temperatureCelsius = 11;
         String greeting = String.format("Hello, %s! The temperature is %d degrees Celsius in %s", visitorName, temperatureCelsius, location);
 
