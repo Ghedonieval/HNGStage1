@@ -20,4 +20,14 @@ public class helloController {
     public ResponseEntity<helloResponse> hello (@RequestParam("visitor_name") String visitorName, HttpServletRequest request){
         return new ResponseEntity<>(helloService.hello(visitorName, request) , HttpStatus.OK);
     }
+
+    @GetMapping("/hello2")
+    public ResponseEntity<helloResponse> hello1(@RequestParam("visitor_name") String visitorName, HttpServletRequest request){
+        return new ResponseEntity<>(helloService.hello2(visitorName, request) , HttpStatus.OK);
+    }
+
+    @GetMapping("/hello3")
+    public ResponseEntity<helloResponse> hello3(@RequestParam("visitor_name")String visitorName, HttpServletRequest request){
+        return new ResponseEntity<>(helloService.hello3(visitorName, request) , HttpStatus.OK);
+    }
 }
